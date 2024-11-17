@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Paquetes- Gregoria Viajes</title>
+
+</head>
+
+<body>
+    <!--Incio -fondo comun a toda la web-->
+
+    <div class="logo-gregoria">
+        <a href="/index.html">
+            <img src="/Images/Logo Gregoria Viajes.jpg" alt="logo-gregoria" width="500" height="300">
+        </a>
+    </div>
+
+
+    <h1>Gregoria Viajes</h1>
+
+    <a href="https://api.whatsapp.com/send/?phone=54911676199460&text&type=phone_number&app_absent=0">Contactate con
+        nosotros!</a>
+    <i class="fa fa-whatsapp" style="font-size:48px;color:rgb(0, 255, 13)"></i>
+
+    <a href="mailto:andres.magnello@gmail.com">Dudas? Escribinos!</a>
+    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 48px;"></i>
+
+
+    <form action=" /submit" method="post">
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario">
+
+        <label for="password"> Contraseña
+            <input type="password" name="password" id="password">
+
+            <input type="submit" value="Enviar">
+
+        </label>
+    </form>
+
+
+    <!-- Listado de Verticales a desarrollar-->
+
+    <ul>
+        <li>
+            <a href="/index.html">Vuelos
+            </a>
+        </li>
+
+        <li> <a href="/pages/hoteles.html">Hoteles
+            </a> </li>
+
+        <li><a href="/pages/paquetes.html">Paquetes
+            </a> </li>
+
+        <li><a href="/pages/autos.html">Autos
+            </a> </li>
+
+        <li><a href="/pages/salidas-grupales.html">Salidas Grupales
+            </a> </li>
+    </ul>
+
+
+    <!--ejemplo busqueda vuelos, aca luego debe ir el motor de la mayorista-->
+
+    <h2>Los mejores Paquetes con todo incluido</h2>
+
+    <form id="ciudad-destino">
+        <label for="ciudad-destino">Ciudad:</label>
+        <select id="ciudad-destino" name="ciudad-destino" required>
+            <option value="miami">Miami</option>
+            <option value="londres">Londres</option>
+            <option value="paris">París</option>
+            <option value="roma">Roma</option>
+            <option value="cancun">Cancun</option>
+            <option value="punta-cana">Punta Cana</option>
+            <option value="rio">Rio de Janeiro</option>
+            <option value="santiago">Santiago de Chile</option>
+        </select>
+
+
+        <label for="fecha-de-regreso">Fecha de Salida:</label>
+        <input type="date" id="fecha-de-regreso" name="fecha-de-regreso" required>
+
+        <label for="cantidad-de-noches">Cantidad de Noches:</label>
+        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" required>
+
+        <label for="cantidad-personas">Cantidad de Personas:</label>
+        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" required>
+
+
+        <button type="submit">Consultar</button>
+    </form>
+
+    <!--Video promocional Paquetes-->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xLLi4gqIgDA?si=Bcy5_lQrpRl_Mj_-"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <h3>Mira nuestras mejores ofertas de Paquetes</h3>
+
+    <div class="imagenes">
+        <div>
+
+            <p>Ofertas de Paquetes a Caribe</p>
+            <a href="https://www.amichi.com.ar/packages/">
+                <img src="/Images/imagen punta cana.jpg" alt="oferta-paquetes-1" width="500" height="300">
+            </a>
+        </div>
+
+        <div>
+            <p>Ofertas de Paquetes a Brasil</p>
+            <a href="https://www.amichi.com.ar/packages/">
+                <img src="/Images/Imagen Buzios.jpg" alt="oferta-paquetes-2" width="500" height="300">
+            </a>
+        </div>
+
+        <div>
+
+            <p>Ofertas de Paquetes a Europa</p>
+            <a href="https://www.amichi.com.ar/packages/">
+                <img src="/Images/imagen europa.jpg" alt="oferta-paquetes-3" width="500" height="300">
+            </a>
+        </div>
+
+        <div>
+            <p>Ofertas de Paquetes a Argentina</p>
+            <a href="https://www.amichi.com.ar/packages/">
+                <img src="/Images/imagen cataratas.jpg" alt="oferta-paquetes-4" width="500" height="300">
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <footer>
+        <div class="link-redes"> Buscanos en nuestras redes
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa fa-instagram"></i>
+            </a>
+
+            <ul>
+                <li>Gregoria Viajes</li>
+                <li>Leg 8909</li>
+                <li>Avda siempre Viva 2013</li>
+                <li>Ciudad Autonoma de buenos Aires</li>
+                <li>Boton de Arrepentimiento</li>
+            </ul>
+        </div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13131.02320237945!2d-58.3647563!3d-34.6356109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20Jos%C3%A9%20Armando!5e0!3m2!1ses-419!2sar!4v1729389004484!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </footer>
+</footer>
+
+
+
+</html>

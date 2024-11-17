@@ -1,0 +1,49 @@
+/* CSS DE LA HOME */
+body {font-family:'Times New Roman', Times, serif; 
+background-color:darkgray;
+background-position: top;}
+
+h1 {text-align: center;
+color:rgb(204, 25, 43)
+;
+background-color: burlywood;}
+
+h2 {text-align: center;
+color:blueviolet;
+background-color:chocolate ;
+}
+h3{text-align: center;
+background-color: chocolate;}
+
+ul {font-style: italic;
+display: flex;
+}
+
+.verticales {background-color: blue;
+display: flex;
+list-style: none;}
+
+
+
+form {font-size: small;
+margin-top: 50px;
+margin-bottom: 50px;}
+
+footer {margin-top: 50px;
+margin-bottom: 50px;}
+
+.link-redes {font-size: larger;
+;}
+
+header {display: flex;}
+
+
+.imagenes {display: flex;
+size: 50%;}
+
+
+
+
+
+
+
