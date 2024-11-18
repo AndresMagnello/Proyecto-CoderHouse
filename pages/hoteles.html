@@ -3,78 +3,93 @@
 
 <head>
 
-    <link rel="stylesheet" href="style.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Hoteles- Gregoria Viajes</title>
+    <link rel="stylesheet" href="/Style.css">
+
+    <title>Hoteles-Gregoria Viajes</title>
 
 </head>
 
 <body>
     <!--Incio -fondo comun a toda la web-->
 
-    <div class="logo-gregoria">
-        <a href="/index.html">
-            <img src="/Images/Logo Gregoria Viajes.jpg" alt="logo-gregoria" width="500" height="300">
-        </a>
-    </div>
+    <header class="row">
+        <div class="col"> <a href="/index.html">
+                <img src="/Images/Logo Gregoria Viajes.jpg" alt="logo-gregoria" width="250px" height="150px">
+                </a>
+        </div>
+
+        <div class="col fs-3"> <a href="/index.html" class="text-decoration-none text-dark">
+                Gregoria Viajes
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://api.whatsapp.com/send/?phone=5491167619946&text&type=phone_number&app_absent=0">Contactate
+                con
+                nosotros!</a>
+            <i class="fa fa-whatsapp" style="font-size:36px; color:rgb(0, 255, 13)"></i>
+        </div>
+
+        <div class="col">
+            <a href="mailto:andres.magnello@gmail.com">Dudas? Escribinos!</a>
+            <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 24px;"></i>
+        </div>
 
 
-    <h1>Gregoria Viajes</h1>
+        <div class="col ms-auto">
+            <form action="/submit" method="post">
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <div>
+                    <input type="submit" value="Ingresar" class="btn btn-secondary">
+                </div>
 
-    <a href="https://api.whatsapp.com/send/?phone=54911676199460&text&type=phone_number&app_absent=0">Contactate con
-        nosotros!</a>
-    <i class="fa fa-whatsapp" style="font-size:48px;color:rgb(0, 255, 13)"></i>
-
-    <a href="mailto:andres.magnello@gmail.com">Dudas? Escribinos!</a>
-    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 48px;"></i>
-
-
-    <form action=" /submit" method="post">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario">
-
-        <label for="password"> Contraseña
-            <input type="password" name="password" id="password">
-
-            <input type="submit" value="Enviar">
-
-        </label>
-    </form>
-
+    </header>
 
     <!-- Listado de Verticales a desarrollar-->
 
-    <ul>
-        <li>
-            <a href="/index.html">Vuelos
-            </a>
-        </li>
+    <section>
+        <ul class="verticales">
+            <li>
+                <a href="/index.html">Vuelos
+                </a>
+            </li>
 
-        <li> <a href="/pages/hoteles.html">Hoteles
-            </a> </li>
+            <li> <a href="hoteles.html">Hoteles
+                </a> </li>
 
-        <li><a href="/pages/paquetes.html">Paquetes
-            </a> </li>
+            <li><a href="paquetes.html">Paquetes
+                </a> </li>
 
-        <li><a href="/pages/autos.html">Autos
-            </a> </li>
+            <li><a href="autos.html">Autos
+                </a> </li>
 
-        <li><a href="/pages/salidas-grupales.html">Salidas Grupales
-            </a> </li>
-    </ul>
+            <li><a href="salidas-grupales.html">Salidas Grupales
+                </a> </li>
+        </ul>
 
+
+    </section>
 
     <!--ejemplo busqueda vuelos, aca luego debe ir el motor de la mayorista-->
 
-    <h2>Los mejores Hoteles para tu viaje</h2>
+    <h2 class="text-center">Los mejores Hoteles para tu viaje</h2>
 
-    <form id="ciudad-destino">
-        <label for="ciudad-destino">Ciudad:</label>
+    <button type="button" class="btn btn-secondary">Ciudad Destino
         <select id="ciudad-destino" name="ciudad-destino" required>
             <option value="miami">Miami</option>
             <option value="londres">Londres</option>
@@ -85,20 +100,25 @@
             <option value="rio">Rio de Janeiro</option>
             <option value="santiago">Santiago de Chile</option>
         </select>
+    </button>
 
 
-        <label for="fecha-de-salida">Fecha de Ingreso:</label>
+
+    <button type="button" class="btn btn-secondary">Fecha de salida
         <input type="date" id="fecha-de-salida" name="fecha-de-salida" required>
+    </button>
 
-        <label for="fecha-de-regreso">Fecha de Salida:</label>
+    <button type="button" class="btn btn-secondary">Fecha de regreso
         <input type="date" id="fecha-de-regreso" name="fecha-de-regreso" required>
+    </button>
 
-        <label for="cantidad-personas">Cantidad de Personas:</label>
-        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" required>
+    <button type="button" class="btn btn-secondary">Cantidad de Personas
+        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" max="12" required>
+    </button>
 
 
-        <button type="submit">Consultar</button>
-    </form>
+    <button type="button" class="btn btn-success">Consultar </button>
+
 
     <!--Video promocional Hoteles-->
 
@@ -108,73 +128,96 @@
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-    <h3>Mira nuestras mejores ofertas de Hoteles</h3>
+    <!--Ofertas de la verticual de hoteles 
+    -->
+    <h3 class="text-center">Mira nuestras mejores ofertas de Hoteles</h3>
 
-    <div class="imagenes">
-        <div>
+    <div class="ofertas-hoteles">
 
-            <p>Ofertas de Hoteles en Madrid</p>
-            <a href="https://www.despegar.com.ar/hoteles/">
-                <img src="/Images/imagen madrid.jpg" alt="oferta-hoteles-1" width="500" height="300">
-            </a>
+        <div class="card" style="width: 18rem;">
+            <img src="/Images/imagen madrid.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ofertas de Hoteles en Madrid</h5>
+                <p class="card-text">Los mejores Hoteles disponibles a Madrid en un solo click!</p>
+                <a href="https://www.despegar.com.ar/hoteles/" class="btn btn-success">Quiero mi habitacion!</a>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Images/imagen miami.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ofertas de Hoteles en Miami</h5>
+                <p class="card-text">Los mejores Hoteles disponibles a Miami en un solo click!</p>
+                <a href="https://www.despegar.com.ar/hoteles/" class="btn btn-success">Quiero mi habitacion!</a>
+            </div>
         </div>
 
-        <div>
-            <p>Ofertas de Hoteles en Miami</p>
-            <a href="https://www.despegar.com.ar/hoteles/">
-                <img src="/Images/imagen miami.jpg" alt="oferta-hoteles-2" width="500" height="300">
-            </a>
+        <div class="card" style="width: 18rem;">
+            <img src="/Images/imagen new york.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ofertas de Hoteles en New York</h5>
+                <p class="card-text">Los mejores Hoteles disponibles a New York en un solo click!</p>
+                <a href="https://www.despegar.com.ar/hoteles/" class="btn btn-success">Quiero mi habitacion!</a>
+            </div>
         </div>
 
-        <div>
-
-            <p>Ofertas de hoteles en New York</p>
-            <a href="https://www.despegar.com.ar/hoteles/">
-                <img src="/Images/imagen new york.jpg" alt="oferta-hoteles-3" width="500" height="300">
-            </a>
-        </div>
-
-        <div>
-            <p>Ofertas de Hoteles en Rio de Janeiro</p>
-            <a href="https://www.despegar.com.ar/hoteles/">
-                <img src="/Images/Imagen Rio.jpg" alt="oferta-hoteles-4" width="500" height="300">
-            </a>
+        <div class="card" style="width: 18rem;">
+            <img src="/Images/Imagen Rio.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ofertas de Hoteles a Rio de Janeiro</h5>
+                <p class="card-text">Los mejores vuelos disponibles a Rio de janeiro en un solo click!</p>
+                <a href="https://www.despegar.com.ar/hoteles/" class="btn btn-success">Quiero mi habitacion!</a>
+            </div>
         </div>
 
     </div>
 
-</body>
 
-<footer>
+
+    </div>
+
     <footer>
-        <div class="link-redes"> Buscanos en nuestras redes
+        <div class="iconos">
             <a href="https://www.facebook.com" target="_blank">
                 <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fa fa-instagram"></i>
-            </a>
-
-            <ul>
-                <li>Gregoria Viajes</li>
-                <li>Leg 8909</li>
-                <li>Avda siempre Viva 2013</li>
-                <li>Ciudad Autonoma de buenos Aires</li>
-                <li>Boton de Arrepentimiento</li>
-            </ul>
         </div>
-        <div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13131.02320237945!2d-58.3647563!3d-34.6356109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20Jos%C3%A9%20Armando!5e0!3m2!1ses-419!2sar!4v1729389004484!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="iconos">
+            <a href="https://www.twitter.com" target="_blank">
+                <i class="fa fa-twitter"></i></a>
+        </div>
+
+        <div class="iconos">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="iconos"> <a href="https://maps.app.goo.gl/DsJeFma3kvbWJHof8" target="_blank">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </a> </div>
+
+
+
+        <ul class="legales">
+            <li>Gregoria Viajes</li>
+            <li>Leg 8909</li>
+            <li>Avda siempre Viva 2013</li>
+            <li>Ciudad Autonoma de buenos Aires</li>
+            <li>Boton de Arrepentimiento</li>
+        </ul>
 
         </div>
     </footer>
-</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
 
 
 
