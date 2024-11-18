@@ -36,7 +36,7 @@ header {
     }
 }
 
-/* Estilo para tabletas (pantallas medianas) */
+
 @media (min-width: 768px) and (max-width: 1199px) {
     .verticales {
         padding-top: 30px;
@@ -115,6 +115,7 @@ footer {
     justify-content: space-around;
     border-style: groove;
     background-color: aliceblue;
+    flex-wrap: wrap
 }
 
 .iconos {
